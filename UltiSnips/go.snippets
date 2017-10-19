@@ -8,3 +8,9 @@ endsnippet
 snippet mux "mux.NewRouter()"
 mux.NewRouter()
 endsnippet
+
+snippet ahf "anonymous http handler func"
+func(w http.ResponseWriter, r *http.Request){
+	$1
+}
+endsnippet
