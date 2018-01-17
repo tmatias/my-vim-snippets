@@ -1,12 +1,13 @@
 snippet rct "React Component Test" b
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+import { shallowToJson } from 'enzyme-to-json'
 import $2 from './$2';
 
 describe('${2:`!v expand('%:t:r:r')`}', () => {
 	it('renders', () => {
-		const tree = renderer.create(<$2 $1 />).toJSON();
-		expect(tree).toMatchSnapshot();
+		const tree = shallow(<$2 $1 />);
+		expect(shallowToJson(tree)).toMatchSnapshot();
 	})
 })
 endsnippet
