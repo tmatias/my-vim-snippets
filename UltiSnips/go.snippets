@@ -15,6 +15,14 @@ func(w http.ResponseWriter, r *http.Request){
 }
 endsnippet
 
+snippet thf "an http handler func in a type" !i
+func ($1 $2) $3(w http.ResponseWriter, r *http.Request){
+	$4
+}
+endsnippet
+
+
+
 snippet stru "struct definition"
 type $1 struct {
 	$2
