@@ -26,6 +26,14 @@ const ${1:`!v expand('%:t:r')`} = () => (
 );
 endsnippet
 
-snippet exdef "ES6 Default Export"
+snippet expdef "ES6 Default Export"
 export default ${1:`!v expand('%:t:r')`}
+endsnippet
+
+snippet arf "Arrow Function"
+($1) => $2
+endsnippet
+
+snippet impcss "Import CSS File"
+import "./`expand('%:t:r')`";
 endsnippet
