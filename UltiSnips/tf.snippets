@@ -3,3 +3,9 @@ provider "aws" {
 	region = "$1"
 }
 endsnippet
+
+snippet res "terraform resource"
+resource "$1" {
+	$2
+}
+endsnippet
