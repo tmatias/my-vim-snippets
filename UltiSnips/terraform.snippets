@@ -26,6 +26,12 @@ terraform {
 }
 endsnippet
 
+snippet out "terraform output"
+output "$1" {
+	value = "${$2}"
+}
+endsnippet
+
 snippet terragrunt "terragrunt include"
 terragrunt = {
 	include {
