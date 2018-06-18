@@ -39,7 +39,7 @@ endsnippet
 
 snippet remdata "terraform remote state data"
 data "terraform_remote_state" "$1" {
-	backend "s3"
+	backend = "s3"
 
 		config {
 			bucket = "${var.bucket}"
