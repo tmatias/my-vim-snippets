@@ -25,3 +25,30 @@ terraform {
 	backend "s3" {}
 }
 endsnippet
+
+snippet terragrunt "terragrunt include"
+terragrunt = {
+	include {
+		path = "${find_in_parent_folders()}"
+	}
+	dependencies {
+		paths = ["../../path/from/root"]
+	}
+}
+endsnippet
+
+snippet remdata "terraform remote state data"
+data "terraform_remote_state" "$1" {
+	backend "s3"
+
+		config {
+			bucket = "${var.bucket}"
+			key    = "${var.region}/$1/terraform.tfstate"
+			region = "${var.region}"
+		}
+}
+endsnippet
+
+snippet remst "terraform remote state ref"
+data.terraform_remote_state.$1
+endsnippet
