@@ -20,7 +20,7 @@ snippet var "terraform variable"
 variable "$1" {}
 endsnippet
 
-snippet vard "terraform variable with description"
+snippet dvar "terraform variable with description"
 variable "$1" {
 	description = "$2"
 }
@@ -38,7 +38,7 @@ output "$1" {
 }
 endsnippet
 
-snippet terragrunt "terragrunt include"
+snippet grunt "terragrunt include"
 terragrunt = {
 	include {
 		path = "${find_in_parent_folders()}"
@@ -49,7 +49,7 @@ terragrunt = {
 }
 endsnippet
 
-snippet remdata "terraform remote state data"
+snippet rdat "terraform remote state data"
 data "terraform_remote_state" "$1" {
 	backend = "s3"
 
