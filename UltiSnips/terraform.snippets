@@ -20,6 +20,12 @@ snippet var "terraform variable"
 variable "$1" {}
 endsnippet
 
+snippet vard "terraform variable with description"
+variable "$1" {
+	description = "$2"
+}
+endsnippet
+
 snippet s3 "terraform s3 backend"
 terraform {
 	backend "s3" {}
