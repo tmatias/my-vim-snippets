@@ -73,6 +73,10 @@ snippet lr "terraform local ref" i
 ${local.$1}
 endsnippet
 
+snippet kv "terraform assignment"
+$1 = "$2"
+endsnippet
+
 snippet kvv "terraform assignment using a var reference"
 $1 = "${var.$1}"
 endsnippet
